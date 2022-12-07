@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../components/ProductCard";
 import { toggleBrand, toggleStock } from "../../redux/actions/filterActions";
-import { loadProduct } from "../../redux/actions/productAction";
 import { loadProductData } from "../../redux/thunk/products/fetchProducts";
 
 const Home = () => {

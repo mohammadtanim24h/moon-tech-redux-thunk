@@ -1,4 +1,5 @@
 import {
+  ADD_PRODUCT,
   ADD_TO_CART,
   LOAD_PRODUCT,
   PRODUCT_LOADED,
@@ -20,6 +21,11 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         products: action.payload,
+      }
+    case ADD_PRODUCT:
+      return {
+        ...state,
+        products: [...state.products, action.payload],
       }
     case ADD_TO_CART:
       if (selectedProduct) {
